@@ -7,6 +7,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
@@ -39,7 +40,7 @@ public class HomeController {
             response = String.class
     )
     @GetMapping
-    public String home() {
+    public String home(Model model) {
         ResponseEntity<List<PieceInformation>> pieceInformationResponse =
                 restTemplate.exchange(
                         "http://art-service-manipulating-data-service-application/pieces",
@@ -48,7 +49,9 @@ public class HomeController {
                         new ParameterizedTypeReference<List<PieceInformation>>(){}
                 );
 
-        List<PieceInformation> pieceInformationList = pieceInformationResponse.getBody();
+        List<PieceInformation> pieces = pieceInformationResponse.getBody();
+
+        model.addAttribute("pieces", pieces);
 
         return "home";
     }
