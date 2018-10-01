@@ -1,9 +1,12 @@
-package com.artservicefrontend.artservicefrontend.Domain;
+package com.artservicefrontend.artservicefrontend.domain;
 
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 
+/**
+ * This is the concrete implementation class for information around artwork pieces.
+ */
 @Data
 public class MutablePieceInformation implements PieceInformation {
     

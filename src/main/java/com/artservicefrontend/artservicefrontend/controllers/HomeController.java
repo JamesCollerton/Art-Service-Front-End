@@ -1,31 +1,44 @@
-package com.artservicefrontend.artservicefrontend.Controllers;
+package com.artservicefrontend.artservicefrontend.controllers;
 
-import com.artservicefrontend.artservicefrontend.Domain.MutablePieceInformation;
-import com.artservicefrontend.artservicefrontend.Domain.PieceInformation;
+import com.artservicefrontend.artservicefrontend.domain.PieceInformation;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
+/**
+ * This is the controller for the home page of the site.
+ */
 @Controller
+@RequestMapping("/")
 public class HomeController {
 
+    /**
+     * Autowired rest template to allow us to use the Eureka intelligent
+     * service routing.
+     */
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * This returns the view for the home page.
+     *
+     * @return
+     */
     @ApiOperation(
             httpMethod = "GET",
             value = "Get the home view",
             notes = "Returns the home template for the web front end.",
             response = String.class
     )
-    @GetMapping("/")
+    @GetMapping
     public String home() {
         ResponseEntity<List<PieceInformation>> pieceInformationResponse =
                 restTemplate.exchange(
