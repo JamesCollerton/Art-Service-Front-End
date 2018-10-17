@@ -43,7 +43,7 @@ public class HomeController {
     public String home(Model model) {
         ResponseEntity<List<PieceInformation>> pieceInformationResponse =
                 restTemplate.exchange(
-                        "http://art-service-manipulating-data-service-application/pieces",
+                        "http://art-service-manipulating-data-service/pieces",
                         HttpMethod.GET,
                         null,
                         new ParameterizedTypeReference<List<PieceInformation>>(){}
