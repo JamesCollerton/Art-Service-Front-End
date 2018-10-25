@@ -49,20 +49,6 @@ public class HomeController {
     )
     @GetMapping
     public String home(Model model) {
-//        ResponseEntity<List<PieceInformation>> pieceInformationResponse =
-//                restTemplate.exchange(
-//                        "http://art-service-manipulating-data-service/pieces",
-//                        HttpMethod.GET,
-//                        null,
-//                        new ParameterizedTypeReference<List<PieceInformation>>(){}
-//                );
-//
-//        List<PieceInformation> pieces = pieceInformationResponse.getBody();
-
-//        PieceInformation pieceInformation = Feign.builder()
-//                                                .decoder(new GsonDecoder())
-//                                                .target(PieceInformation.class);
-
         List<PieceInformation> pieces = artServiceManipulatingDataClient.getAllPieceInformation();
 
         model.addAttribute("pieces", pieces);
