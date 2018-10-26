@@ -58,6 +58,10 @@ With Netflix Eureka each client can simultaneously act as a server, to replicate
 
 Feign is a declarative web service client and is used to handle REST requests. It interacts with the Eureka server in order to pick up application names, then employing the names to generate methods to call other services.
 
+## Zuul
+
+Zuul is a JVM based router and server side load balancer by Netflix. It allows us to do things like filter requests, apply authorisation etc.
+
 ## Swagger
 
 Swagger is a set of open-source tools built around the OpenAPI Specification that can help you design, build, document and consume REST APIs. Primarily we use Swagger UI to renders OpenAPI specs generated from the end points as interactive API documentation.
@@ -106,4 +110,14 @@ Travis CI is our CI tool. It handles building each of the services, pushing the 
 
 This is our code coverage tool. It updates our repositories to give the percentage of code tested.
 
-Port Number: 8081
+# Service Details
+
+The service specific details are as below:
+
+Detail | Value
+------------ | -------------
+Port Number | 8081
+Spring Application Name | art-service-front-end
+ECR Repository Name |
+ECS Service/ Task Name |
+
