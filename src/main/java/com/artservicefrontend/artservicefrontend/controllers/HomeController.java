@@ -24,22 +24,16 @@ import java.util.List;
 public class HomeController {
 
     /**
-     * Autowired rest template to allow us to use the Eureka intelligent
-     * service routing.
-     */
-    @Autowired
-    private RestTemplate restTemplate;
-
-    /**
      * Autowired client for retrieving piece information from the manipulating data service
      */
     @Autowired
     private ArtServiceManipulatingDataClient artServiceManipulatingDataClient;
 
     /**
-     * This returns the view for the home page.
+     * This returns the view for the home page. It adds all of the piece information to the Thymeleaf model
+     * and then returns the view.
      *
-     * @return
+     * @return The view name
      */
     @ApiOperation(
             httpMethod = "GET",
