@@ -80,10 +80,30 @@ Thymeleaf is a modern server-side Java template engine for both web and standalo
 
 # Infrastructure and Deployment
 
+The above covers the dependencies of the project. Below we cover the infrastructure.
+
 ## AWS
+
+We use AWS to hold our repositories and deploy our containers. 
+
+### ECS
+
+I've used ECS to deploy to, however I feel that really I should have used ECS tools rather than the Netflix stack as ECS covers things like load balancing and scaling. There is only one cluster and all of our services run here.
+
+### ECR
+
+ECR is the image repository we push to. We have separate repositories for each service.
+
+### S3
+
+We have an S3 bucket for containing our Terraform remote state.
 
 ## Travis CI
 
+Travis CI is our CI tool. It handles building each of the services, pushing the created Docker images to the repository and then redeploying them to the cluster.
+
 ## CodeCov 
+
+This is our code coverage tool. It updates our repositories to give the percentage of code tested.
 
 Port Number: 8081
