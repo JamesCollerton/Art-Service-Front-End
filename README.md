@@ -3,7 +3,7 @@
 
 # Art Service Front End
 
-Welcome to the art services ecosystem! This is a test project I made in order to further my understanding of services. Although none of the services take precedence this is the project I am using to describe the ecosystem and roughly how it works. Currently there are the following components:
+Welcome to the art services ecosystem! This is a test project I made in order to further my understanding of services. Although none of the services take precedence I am using this project to describe the ecosystem and roughly how it works. Currently there are the following components:
 
 - [Front End](https://github.com/JamesCollerton/Art_Service_Front_End)
 - [Manipulating Data Service](https://github.com/JamesCollerton/Art_Service_Manipulating_Data_Service)
@@ -14,7 +14,7 @@ Welcome to the art services ecosystem! This is a test project I made in order to
 
 # Components
 
-Outlining the purpose of each of the components below:
+The purpose of each of the components is outlined below:
 
 ## Front End
 
@@ -22,7 +22,7 @@ This handles all of the UI for the service. It is a very simple web page which t
 
 ## Manipulating Data Service
 
-This handles manipulating data. We have a reference data service that is used to pull data from a mock database. This then takes that data and would, if needed, do some manipulation.
+This handles manipulating data. We have a reference data service that is used to pull data from a mock database. This service takes that data and would, if needed, do some manipulation.
 
 ## Sourcing Data Service
 
@@ -92,7 +92,7 @@ We use AWS to hold our repositories and deploy our containers.
 
 ### ECS
 
-I've used ECS to deploy to, however I feel that really I should have used ECS tools rather than the Netflix stack as ECS covers things like load balancing and scaling. There is only one cluster and all of our services run here.
+I've used ECS to deploy to. However, ECS covers things like load balancing and scaling so perhaps I should have implemented that functionality there instead of employing the Netflix stack. There is only one cluster and all of our services run here.
 
 ### ECR
 
@@ -121,3 +121,11 @@ Spring Application Name | art-service-front-end
 ECR Repository Name |
 ECS Service/ Task Name |
 
+# Points for Improvement
+
+I fully realise that this isn't a perfect service implementation and my suggested improvements would include:
+
+- Permanent database in AWS.
+- Spring cloud config.
+- Prometheus with Slack integration for monitoring state.
+- S3 bucket for holding the website images.
