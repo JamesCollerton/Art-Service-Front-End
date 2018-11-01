@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-    artservicesourcingdataservice:
+    artservicefrontend:
         build: 
             context: ./
         ports:
-            - 8761:8761
+            - 8081:8081
         image: artservicefrontend:${TAG}
