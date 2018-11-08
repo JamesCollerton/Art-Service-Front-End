@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/JamesCollerton/Art_Service_Front_End.svg?branch=master)](https://travis-ci.com/JamesCollerton/Art_Service_Front_End)
 [![codecov](https://codecov.io/gh/JamesCollerton/Art_Service_Front_End/branch/master/graph/badge.svg)](https://codecov.io/gh/JamesCollerton/Art_Service_Front_End)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e7f983e7d764d481c035/maintainability)](https://codeclimate.com/github/JamesCollerton/Art_Service_Front_End/maintainability)
 
 # Art Service Front End
 
