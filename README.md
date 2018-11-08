@@ -118,7 +118,7 @@ Detail | Value
 ------------ | -------------
 Port Number | 8081
 Spring Application Name | art-service-front-end
-ECR Repository Name |
+ECR Repository Name | art-service-front-end
 ECS Service/ Task Name |
 
 # Points for Improvement
