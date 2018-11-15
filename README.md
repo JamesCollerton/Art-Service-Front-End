@@ -82,6 +82,14 @@ Actuator brings production-ready features to our application. This includes moni
 
 Thymeleaf is a modern server-side Java template engine for both web and standalone environments. Here we use it to generate our web page.
 
+## Spring Contracts
+
+Spring Cloud Contract is an umbrella project holding solutions that help users in successfully implementing the Consumer Driven Contracts approach. It is shipped with Contract Definition Language (DSL) written in Groovy or YAML. It allows for testing of the contract itself, as well as producing a wiremock of the API itself to be used by other APIs in their testing.
+
+## Hysterix
+
+Hystrix is a latency and fault tolerance library designed to isolate points of access to remote systems, services and 3rd party libraries, stop cascading failure and enable resilience in complex distributed systems where failure is inevitable. In this example project we use it to allow for a timeout of attempts to call APIs.
+
 # Infrastructure and Deployment
 
 The above covers the dependencies of the project. Below we cover the infrastructure.
@@ -110,6 +118,10 @@ Travis CI is our CI tool. It handles building each of the services, pushing the 
 
 This is our code coverage tool. It updates our repositories to give the percentage of code tested.
 
+## Code Climate
+
+Quality by Code Climate provides automated code review for test coverage, maintainability and more.
+
 # Service Details
 
 The service specific details are as below:
@@ -118,7 +130,7 @@ Detail | Value
 ------------ | -------------
 Port Number | 8081
 Spring Application Name | art-service-front-end
-ECR Repository Name |
+ECR Repository Name | art-service-front-end
 ECS Service/ Task Name |
 
 # Points for Improvement
